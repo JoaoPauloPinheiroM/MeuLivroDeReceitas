@@ -1,0 +1,64 @@
+[33mcommit 4f6bc3e0d1f7e5754779c44c44e61adcdf604c3e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdevelop[m[33m, [m[1;31morigin/develop[m[33m)[m
+Merge: 50a983d 7833ce2
+Author: João Paulo Pinheiro <joaopaulopinheiro59675@gmail.com>
+Date:   Thu Jun 12 00:37:14 2025 +0000
+
+    Merged PR 3: feat: adding entities user and entity base.
+    
+    feat: adding entities user and entity base.
+    
+    Related work items: #5
+
+[33mcommit 7833ce2d8e4443a0007c73d7cf1df132e415f6d3[m[33m ([m[1;31morigin/feature/add-user-entity[m[33m)[m
+Author: João Paulo Pinheiro Mourão <joaopaulopinheiro59675@gmail.com>
+Date:   Wed Jun 11 21:23:34 2025 -0300
+
+    feat: adding entities user and entity base.
+
+[33mcommit 50a983db3f765f3664cc7b6312d4cdcabc9414a8[m
+Merge: ca1717a 8c8eeae
+Author: João Paulo Pinheiro <joaopaulopinheiro59675@gmail.com>
+Date:   Thu Jun 12 00:19:31 2025 +0000
+
+    Merged PR 2: feat: adding exceptions and messages to register user.
+    
+    feat: adding exceptions and messages to register user.
+
+[33mcommit 8c8eeaed724c2243435d15a673dc4b079a165ec0[m[33m ([m[1;31morigin/feature/exceptions[m[33m)[m
+Author: João Paulo Pinheiro Mourão <joaopaulopinheiro59675@gmail.com>
+Date:   Wed Jun 11 21:13:04 2025 -0300
+
+    feat: adding exceptions and messages to register user.
+
+[33mcommit ca1717a90d3286b0401a358ddd822a6f95378a37[m
+Merge: 64d7abe b26c2da
+Author: João Paulo Pinheiro <joaopaulopinheiro59675@gmail.com>
+Date:   Thu Jun 12 00:06:29 2025 +0000
+
+    Merged PR 1: feat: adding response error json
+    
+    feat: adding response error json
+
+[33mcommit b26c2da8037ededa47930f85bd484dc9783a2e14[m[33m ([m[1;31morigin/feature/add-reponse-error[m[33m)[m
+Author: João Paulo Pinheiro Mourão <joaopaulopinheiro59675@gmail.com>
+Date:   Wed Jun 11 21:00:04 2025 -0300
+
+    feat: adding
+
+[33mcommit 64d7abed1da5bd87523d23ab082463b3f78ba016[m
+Author: João Paulo Pinheiro Mourão <joaopaulopinheiro59675@gmail.com>
+Date:   Tue Jun 3 21:48:57 2025 -0300
+
+    feat: adicionando endipoint para registrar usuario
+
+[33mcommit 508e1877b0a617923c61266363a4de04186dfe0a[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: João Paulo Pinheiro Mourão <joaopaulopinheiro59675@gmail.com>
+Date:   Mon Jun 2 23:18:27 2025 -0300
+
+    inital commit
+
+[33mcommit 2a7df5965e3ceb77b19322c84e68389cea40f756[m
+Author: João Paulo Pinheiro <joaopaulopinheiro59675@gmail.com>
+Date:   Wed May 28 01:55:46 2025 +0000
+
+    Added README.md
