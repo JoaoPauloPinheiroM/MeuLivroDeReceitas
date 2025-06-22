@@ -2,7 +2,8 @@ using MyRecipeBook.API.Filters;
 using MyRecipeBook.API.Middleware;
 using MyRecipeBook.Application;
 using MyRecipeBook.Infrastructure;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+using MyRecipeBook.Infrastructure.Extensions;
+using MyRecipeBook.Infrastructure.Migrations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,5 +40,22 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+MigrateDatabase();
 
 app.Run();
+
+void MigrateDatabase ()
+{
+    if (builder.Configuration.IsUniTest())
+    {
+        return;
+    }
+    var connectionString = builder.Configuration.ConnectionString();
+    //vai criar o scope para usar o servico de injeçao de  dependencia
+    var serviceScope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
+    DataBaseMigrations.Migrate(connectionString , serviceScope.ServiceProvider);
+}
+
+public partial class Program
+{
+}

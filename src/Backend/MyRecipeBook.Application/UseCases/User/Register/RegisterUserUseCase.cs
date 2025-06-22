@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using MyRecipeBook.Application.Services.AutoMapper;
 using MyRecipeBook.Application.Services.Cryptography;
 using MyRecipeBook.Communication.Requests;
 using MyRecipeBook.Communication.Responses;
@@ -7,7 +6,6 @@ using MyRecipeBook.Domain.Repositories;
 using MyRecipeBook.Domain.Repositories.User;
 using MyRecipeBook.Exceptions;
 using MyRecipeBook.Exceptions.ExceptionsBase;
-using System.Drawing;
 
 namespace MyRecipeBook.Application.UseCases.User.Register;
 
@@ -47,10 +45,11 @@ public class RegisterUserUseCase : IRegisterUserUseCase
 
         return new ResponseRegisteredUserJson
         {
-            Name = request.Name
+            Name = user.Name
         };
     }
 
+    //Função de utilidade para poder validar dados de input emails, senha e nome.
     private async Task Validate ( RequestsRegisterUserJson request )
     {
         var validator = new RegisterUserValidator();
