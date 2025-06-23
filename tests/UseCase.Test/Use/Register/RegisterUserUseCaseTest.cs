@@ -4,6 +4,7 @@ using CommonTestUltilities.Repositories;
 using CommonTestUltilities.Requests;
 using FluentAssertions;
 using MyRecipeBook.Application.UseCases.User.Register;
+using MyRecipeBook.Domain.Extensions;
 using MyRecipeBook.Exceptions;
 using MyRecipeBook.Exceptions.ExceptionsBase;
 
@@ -45,16 +46,16 @@ public class RegisterUserUseCaseTest
     }
 
     //usei para ser um método utilitário para as builds e instanciaçoes necess. vai ser melhorado ao longo do desenvolvimento
-    private RegisterUserUseCase CreateUseCase ( string? email = null )
+    private static RegisterUserUseCase CreateUseCase ( string? email = null )
     {
         var mapper = MapperBuilder.Build();
         var passwordEncripter = PasswordEncripterBuilder.Build();
         var writeRepository = UserWriteOnlyRepositorBuilder.Build();
         var unitOfWork = UnitOfWorkBuilder.Build();
         var readRepositoryBuilder = new UserReadOnlyRepositoryBuilder();
-        if (string.IsNullOrEmpty(email) == false)
+        if (string.IsNullOrEmpty(email).IsFalse())
         {
-            readRepositoryBuilder.ExistActiveUserWithEmail(email);
+            readRepositoryBuilder.ExistActiveUserWithEmail(email!);
         }
         return new RegisterUserUseCase(writeRepository , readRepositoryBuilder.Build() , mapper , passwordEncripter , unitOfWork);
     }
